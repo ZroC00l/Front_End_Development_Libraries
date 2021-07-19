@@ -1,0 +1,31 @@
+1.Use Responsive Design with Bootstrap Fluid Containers
+With responsive design, there is no need to design a mobile version of your website. 
+It will look good on devices with screens of any width.
+You can add Bootstrap to any app by adding the following code to the top of your HTML:
+				
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+2.Make Images Mobile Responsive
+In order to make an image to fit the width of any device when the website is accessed we enlist
+the use of bootstrap's class called 'img-responsive'.
+
+3.Center Text with Bootstrap
+In order to center our heading we make use of bootstrap's text-center class. Keep note that we
+can have several classes in one line provided each is seperated by a space e.g
+
+            <h2 class="red-text text-center"> Red Centred Heading</h2>
+
+4.Create a Bootstrap Button
+Bootstrap has its own way of styling buttons, which are more visually appealing more than the plain
+HTML buttons. We use the class "btn btn-default" in order to add a bootstrap button.
+
+5.Create a Block Element Bootstrap Button
+Normally, your button elements with the btn and btn-default classes are only as wide as
+the text that they contain. to make your buttons block level elements meaning no other HTML
+element appears horizontally next to it we invoke the "btn-block" bootstrap class, which makes your
+bootstrap button to fully spread horizontally on the page and any other element following it will
+fall into the next like on the webpage.
+
+6.Bootstrap button colors
+In order to add color to your bootstrap button you can invoke the use of "btn-primary" which will
+fill your bootstrap button with the primary colour of blue.

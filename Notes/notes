@@ -29,3 +29,48 @@ fall into the next like on the webpage.
 6.Bootstrap button colors
 In order to add color to your bootstrap button you can invoke the use of "btn-primary" which will
 fill your bootstrap button with the primary colour of blue.
+
+7.Call out Optional Actions with btn-info
+bootstrap comes equipped with several pre-defined colors for buttons. The "btn-info" class is used
+to call to attention optional actions that a user can take.
+
+8.Warn Your Users of a Dangerous Action with btn-danger
+The "btn btn-danger" class is used to warn users of destructive actions that could happen when the button
+is clicked.Since bootstrap comes with several pre-defined colors for buttons the "btn-danger"
+button's default color is red.
+
+9.Use the Bootstrap Grid to Put Elements Side By Side
+Bootstrap uses a 12-column grid system.This allows us to put elements in rows and specify
+each element's relative width. Most of bootstrap's classes are applied within the div tag.
+Bootstrap has different column width attributes that it uses depending on how wide the
+user's screen is.
+Take for example "col-md-*" md stands for medium and the asterisk specifies how many columns
+wide should an element be. There is also the "col-xs-*" class whereby xs stands for extra small.
+
+10.Ditch Custom CSS for Bootstrap/Use a span to Target Inline Elements
+By using the inline span element, you can put several elements on the same line, and even style
+different parts of the same line differently.
+
+11.Create a Custom Heading
+Remember that bootstrap uses a 12-column grid system, this allows us to to easily put elements in
+rows and specify each element's width using bootstrap's col-md-* or col-xs-* classes. We can easily put
+a heading and an image on the same line without hassle and to top it all off its responsive so no
+need to worry about usability across various devices.
+
+12.Add Font Awesome Icons to our Buttons
+Awesome fonts is a convenient library of icons. These icons can be webfonts or vector graphics.
+Their size is modified using pixels(px) hence their treated just like fonts. To add awesome fonts
+library you need to include the below link to your code:
+
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+We can add icons to our buttons or other HTML elements using the <i> tag, originally this tag
+was used to make text italic however it is now used to add icons , we can also make use of the
+span tag to add icons to our elements.
+
+13.Responsively Style Radio Buttons
+We can also style our form elements using Bootstrap classes such as col-md-* and col-xs-*. We can
+use them to style our radio buttons as well as checkboxes so that they appear uniformly so on any
+device irrespective of their width sizes.
+
+14.Style Text Inputs as Form Controls

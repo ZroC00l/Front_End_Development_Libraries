@@ -84,3 +84,36 @@ We'll do this the same way we have previously: by using a div element with the
 class row, and other div elements within it using the col-xs-* class.
 
 16.Create a Bootstrap Headline
+Now let's build something from scratch to practice our HTML, CSS and Bootstrap skills.
+We'll build a jQuery playground, which we'll soon put to use in our jQuery challenges.
+
+Now that we have a Bootstrap Row, let's split it into two columns to house our elements.
+Create two div elements within your row, both with the class col-xs-6.
+
+17.Create Bootstrap Wells
+Bootstrap has a class called well that can create a visual sense of depth for your columns.
+Nest one div element with the class well within each of your col-xs-6 div elements.
+
+18.Add Elements within Your Bootstrap Wells
+Now we're several div elements deep on each column of our row. This is as deep as we'll need
+to go. Now we can add our button elements.
+Nest three button elements within each of your div elements having the class name well.
+
+19.Create a Class to Target with jQuery Selectors
+Not every class needs to have corresponding CSS. Sometimes we create classes just for the
+purpose of selecting these elements more easily using jQuery. Give each of your buttons the class
+"target".
+
+20.Add id Attributes to Bootstrap Elements
+Recall that in addition to class attributes, you can give each of your elements an id attribute.
+Each id must be unique to a specific element and used only once per page.
+Let's give a unique id to each of our div elements of class well.
+Remember that you can give an element an id like this:
+
+<div class="well" id="center-well">
+
+Give the well on the left the id of left-well. Give the well on the right the id of right-well.
+
+21.Give Each Element a Unique id
+We will also want to be able to use jQuery to target each button by its unique id.
+Give each of your buttons a unique id, starting with target1 and ending with target6.

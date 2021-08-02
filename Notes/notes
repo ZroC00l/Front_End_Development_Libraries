@@ -74,3 +74,13 @@ use them to style our radio buttons as well as checkboxes so that they appear un
 device irrespective of their width sizes.
 
 14.Style Text Inputs as Form Controls
+As we mentioned earlier above, we can apply bootstrap classes to our input elements,so for this
+section we are working with the bootstrap class "form-control" which we apply to our input field
+of type text.
+
+15.Line up Form Elements Responsively with Bootstrap
+Now let's get your form input and your submission button on the same line.
+We'll do this the same way we have previously: by using a div element with the
+class row, and other div elements within it using the col-xs-* class.
+
+16.Create a Bootstrap Headline

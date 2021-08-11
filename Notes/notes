@@ -200,3 +200,30 @@ For example, your jQuery Playground h3 element has the parent element of
 Since button #target1 is the child element of the element with the id left-well, that makes
 the div element with the id left-well its parent element, so the above jQuery statement will
 change the background-color of the left-well to red.
+
+33.Target the Children of an Element Using jQuery
+Elements that occur under a parent element are referred to as the children element of the parent
+element. For instance the div element with the id left-well is the parent element to the children
+element with ids #target1 to #target3. the children() method allows you to access the chil elements
+the parent element e.g:
+
+        $("#right-well").children.css("color","orange");
+The above jQuery statement will change the text color of the parent element's child elements.
+
+34.Target a Specific Child of an Element Using jQuery
+You've seen why id attributes are so convenient for targeting with jQuery selectors.
+But you won't always have such neat ids to work with.
+Fortunately, jQuery has some other tricks for targeting the right elements.
+jQuery uses CSS Selectors to target elements. The target:nth-child(n) CSS selector
+allows you to select all the nth elements with the target class or element type.
+
+        e.g. $(".target:nth-child(2)").addClass("animated bounce");
+
+The jquery statement above will target the second children of the parent element in each well and
+then give each of them an animated bounce.
+
+35.Target Even Elements Using jQuery
+You can also target elements based on their positions using :odd or :even selectors.
+Note that jQuery is zero-indexed which means the first element in a selection has a
+position of 0. This can be a little confusing as, counter-intuitively, :odd selects the
+second element (position 1), fourth element (position 3), and so on.

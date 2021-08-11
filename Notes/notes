@@ -127,5 +127,76 @@ put inside this function will run as soon as your browser has loaded your page.
 This is important because without your document ready function,
 your code may run before your HTML is rendered, which would cause bugs.
 
-23.
+23.Target HTML Elements with Selectors Using jQuery
+All jQuery functions start with a $, usually referred to as a dollar sign operator, or as bling.
+jQuery often selects an HTML element with a selector, then does something to that element.
+For instance inorder to make your buttons bounce we can invoke a jQuery method on the selector
+as follows:
+        $("button").addClass("animated bounce");
 
+To make this selector animation come to live you need to include a link to the CDN that activates
+the animation class, after including the CDN link, you then need to include the following command
+to each selector you want to animate e.g:
+        <button class="animate__animated animate__bounce">My button</button>
+
+24.Target the Same Element with Multiple jQuery Selectors
+Now you know three ways of targeting elements: by type:
+$("button"), by class: $(".btn"), and by id $("#target1").
+Although it is possible to add multiple classes in a single .addClass() call,
+let's add them to the same element in three separate ways.
+
+25.Removing a class in jQuery
+We can remove a certain class property using jQuery's removeclass() method, this helps us to
+remove classes of the same property in a faster manner than individually targeting each class
+property e.g $("button").removeClass("btn-default") will remove the "btn-default" class property
+from all buttons.
+
+26.Change the CSS of an Element Using jQuery
+We can also change the CSS of an HTML element directly with jQuery.
+jQuery has a function called .css() that allows you to change the CSS of an element.
+
+        e.g $("#target1").css("color","red");
+
+27.Disable an HTML property
+You can also change the non-CSS properties of HTML elements with jQuery.
+For example, you can disable buttons.When you disable a button, it will become
+grayed-out and can no longer be clicked.jQuery has a function called .prop() that allows
+you to adjust the properties of elements.Here's how you would disable all buttons:
+
+        $("button").prop("disabled",true);
+
+28.Change Text inside HTML Element using jQuery
+Using jQuery, you can change the text between the start and end tags of an element.
+You can even change HTML markup.jQuery has a function called .html() that lets you add
+HTML tags and text within an element.Query also has a similar function called .text() that only
+alters text without adding tags. In other words, this function will not evaluate
+any HTML tags passed to it, but will instead treat it as the text you want to replace
+the existing content with.
+
+29.Remove and HTML element using jQuery
+jQuery has a built method that we can use to remove an HTML element, take note this method is
+different from the removeClass() method which removes an HTML property with a specific class name.
+remove() method simply removes an HTML element and as such takes no parameters inside.
+
+30.Use appendTo to Move Elements with jQuery
+We can use jQuery's appendTo() method to move HTML elements to another element.
+e.g $("#target1").appendTo("#right-well") will move button #target1 from the left-well to
+the right-well
+
+31.jQuery clone() method
+In addition to appending one element to another element, we can also make a copy of an element
+from one place to another using jQuery's clone() method e.g:
+
+                   $("#target4").clone().appendTo("#left-well")
+The above statement will copy button with id #target4 from the right-well to the left-well.
+
+32.Target the Parent of an Element Using jQuery
+Every HTML element has a parent element from which it inherits properties.
+For example, your jQuery Playground h3 element has the parent element of
+<div class="container-fluid">, which itself has the parent body.
+
+    e.g $("#target1").parent().css("background-color","red")
+
+Since button #target1 is the child element of the element with the id left-well, that makes
+the div element with the id left-well its parent element, so the above jQuery statement will
+change the background-color of the left-well to red.

@@ -248,4 +248,152 @@ And to use the variables:
 One example where variables are useful is when a number of elements need to be the same color.
 If that color is changed, the only place to edit the code is the variable value.
 
-2.
+2.Nest CSS with Sass
+Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet.
+Normally, each element is targeted on a different line to style it, like so:
+
+            nav {
+              background-color: red;
+            }
+
+            nav ul {
+              list-style: none;
+            }
+
+            nav ul li {
+              display: inline-block;
+            }
+For a large project, the CSS file will have many lines and rules. This is where nesting can
+help organize your code by placing child style rules within the respective parent elements:
+
+            nav {
+              background-color: red;
+
+              ul {
+                list-style: none;
+
+                li {
+                  display: inline-block;
+                }
+              }
+            }
+3.Create Reusable CSS with Mixins
+In Sass, a mixin is a group of CSS declarations that can be reused throughout the style sheet.
+
+Newer CSS features take time before they are fully adopted and ready to use in all browsers. As features are added to browsers, CSS rules using them may need vendor prefixes. Consider box-shadow:
+
+            div {
+              -webkit-box-shadow: 0px 0px 4px #fff;
+              -moz-box-shadow: 0px 0px 4px #fff;
+              -ms-box-shadow: 0px 0px 4px #fff;
+              box-shadow: 0px 0px 4px #fff;
+            }
+It's a lot of typing to re-write this rule for all the elements that have a box-shadow, or to change each value to test different effects. Mixins are like functions for CSS. Here is how to write one:
+
+            @mixin box-shadow($x, $y, $blur, $c){
+              -webkit-box-shadow: $x $y $blur $c;
+              -moz-box-shadow: $x $y $blur $c;
+              -ms-box-shadow: $x $y $blur $c;
+              box-shadow: $x $y $blur $c;
+            }
+The definition starts with @mixin followed by a custom name. The parameters (the $x, $y, $blur, and $c in the example above) are optional. Now any time a box-shadow rule is needed, only a single line calling the mixin replaces having to type all the vendor prefixes. A mixin is called with the @include directive:
+
+            div {
+              @include box-shadow(0px, 0px, 4px, #fff);
+            }
+
+Usage Example:
+Write a mixin for border-radius and give it a $radius parameter.
+It should use all the vendor prefixes from the example.
+Then use the border-radius mixin to give the #awesome element a border radius of 15px.
+
+            <body>
+                <div id="awesome"></div>
+            </body>
+
+            <style type="text/scss">
+                @mixin border-radius($radius){
+                    -webkit-border-radius: $radius;
+                    -moz-border-radius:$radius;
+                    -ms-border-radius:$radius;
+                    border-radius:$radius
+                }
+
+                #awesome{
+                    background-color: pink;
+                    height: 100px;
+                    width:100px;
+
+                    @include border-radius(50px);
+                }
+            </style>
+
+4.Use @if and @else to Add Logic To Your Styles
+The @if directive in Sass is useful to test for a specific case - it works just like the if
+statement in JavaScript.
+
+            @mixin make-bold($bool) {
+              @if $bool == true {
+                font-weight: bold;
+              }
+            }
+And just like in JavaScript, @else if and @else test for more conditions:
+
+            @mixin text-effect($val) {
+              @if $val == danger {
+                color: red;
+              }
+              @else if $val == alert {
+                color: yellow;
+              }
+              @else if $val == success {
+                color: green;
+              }
+              @else {
+                color: black;
+              }
+            }
+Usage Example:
+Create a mixin called border-stroke that takes a parameter $val. The mixin should check for
+the following conditions using @if, @else if, and @else:
+
+            light - 1px solid black
+            medium - 3px solid black
+            heavy - 6px solid black
+If $val is not light, medium, or heavy, the border should be set to none.
+
+
+            <style type="text/scss">
+            @mixin border-stroke($x){
+                -webkit-border-stroke:$x;
+                -moz-border-stroke:$x;
+                -ms-border-stroke:$x;
+                border-stroke:$x;
+            }
+
+            @if $val== light {
+                border: 1px solid black;
+            }
+            @else if $val==medium{
+                border: 3px solid black;
+            }
+            @else if $val==heavy{
+                border: 6px solid black;
+            }
+            @else{
+                border:none;
+            }
+
+            #box{
+                background-color:black;
+                width:100px;
+                height:100px;
+                @include border-stroke(medium);
+            }
+
+            </style>
+
+            <body>
+                <div id="box></box>
+            </body
+

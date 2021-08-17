@@ -227,3 +227,25 @@ You can also target elements based on their positions using :odd or :even select
 Note that jQuery is zero-indexed which means the first element in a selection has a
 position of 0. This can be a little confusing as, counter-intuitively, :odd selects the
 second element (position 1), fourth element (position 3), and so on.
+
+SASS
+1.Store Data with Sass Variables
+One feature of Sass that's different than CSS is it uses variables.
+They are declared and set to store data, similar to JavaScript.
+In JavaScript, variables are defined using the let and const keywords.
+In Sass, variables start with a $ followed by the variable name.
+
+Here are a couple examples:
+
+            $main-fonts: Arial, sans-serif;
+            $headings-color: green;
+And to use the variables:
+
+            h1 {
+              font-family: $main-fonts;
+              color: $headings-color;
+            }
+One example where variables are useful is when a number of elements need to be the same color.
+If that color is changed, the only place to edit the code is the variable value.
+
+2.
